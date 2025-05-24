@@ -1,49 +1,49 @@
 # vipaccessbot
 # VIP Access Bot
 
-Telegram bot that monitors join requests to a private VIP channel and handles automated payments and subscriptions.
+Telegram bot for managing paid access to a VIP channel.
 
 ## Features
-- Auto-detect join requests
-- Sends instruction message even if user hasn't pressed `/start`
-- Admin panel with `/admin` access
-- Set channel with `/setchannel <link>`
-- Payment button and manual check image upload
-- Admin approves with 1/3/6 month option
-- Stores subscription in SQLite and auto-kicks after expiry
+- Auto-monitor join requests (no need for user to press /start)
+- Sends instructions + payment button
+- Admin panel to set channel and card number
+- Admin approves check manually (1/3/6 month access)
+- Auto save to SQLite
+- Auto-kick when subscription ends
 
 ## Setup
 
-1. Clone the repository:
 ```bash
 git clone https://github.com/mirjalol2008/vipaccessbot
 cd vipaccessbot
-
-Install dependencies:
 pip install -r requirements.txt
 
-Configure your bot token: Edit config.py and paste your Bot Token:
-BOT_TOKEN = "YOUR_BOT_TOKEN"
+Update your config.py:
+
+BOT_TOKEN = "your_telegram_bot_token"
+ADMIN_ID = 123456789
+
+
 
 Run the bot:
+
 python bot.py
+
 
 Admin Commands
 
 /admin — Open admin panel
 
-/setchannel t.me/YourChannelLink — Set VIP channel
+/setchannel t.me/YourChannel — Set VIP channel link
 
-/exit — Exit admin panel
-
-database.db and channel.txt are generated automatically.
-
-Auto-kick will be handled based on saved subscription duration.
+/exit — Exit admin mode
 
 
+License
 
----
+MIT License - see LICENSE file
 
-Made with ❤️ by mirjalol2008
+See CONTRIBUTING.md for how to contribute.
 
 ---
+ CREATE BY😎 mirjalol2008
