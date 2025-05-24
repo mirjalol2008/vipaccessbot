@@ -18,3 +18,32 @@ Telegram bot that monitors join requests to a private VIP channel and handles au
 ```bash
 git clone https://github.com/mirjalol2008/vipaccessbot
 cd vipaccessbot
+
+Install dependencies:
+pip install -r requirements.txt
+
+Configure your bot token: Edit config.py and paste your Bot Token:
+BOT_TOKEN = "YOUR_BOT_TOKEN"
+
+Run the bot:
+python bot.py
+
+Admin Commands
+
+/admin — Open admin panel
+
+/setchannel t.me/YourChannelLink — Set VIP channel
+
+/exit — Exit admin panel
+
+database.db and channel.txt are generated automatically.
+
+Auto-kick will be handled based on saved subscription duration.
+
+
+
+---
+
+Made with ❤️ by mirjalol2008
+
+---
